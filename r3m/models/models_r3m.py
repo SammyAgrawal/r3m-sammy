@@ -92,7 +92,6 @@ class R3M(nn.Module):
             preprocess = nn.Sequential(
                         self.normlayer,
                 )
-
         ## Input must be [0, 255], [3,244,244]
         obs = obs.float() /  255.0
         obs_p = preprocess(obs)
